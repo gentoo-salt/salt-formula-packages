@@ -11,6 +11,7 @@ include:
    ''
 ) }}
 
+{% if salt['cmd.shell']('find /etc/ -name ._cfg*_rc.conf | wc -l') != '0' %}
 update-rc-conf:
   cmd.run:
     - name: "bash -c yes 2>/dev/null | etc-update --automode -3 {{ rc_file }} -y"
@@ -31,5 +32,6 @@ set-{{ option }}:
       - set {{ option }} \"{{ value }}\"
 {% endfor %}
 {% endfor %}
+{% endif %}
 
 {% endif %}
