@@ -4,7 +4,7 @@
 {% set packages = ['dev-libs/wayland-protocols','x11-libs/libdrm','media-libs/mesa'] %}
 
 {% for pkg in packages %}
-{{ package.accept_keywords((
+{{ package.accept_keywords(
    'mesa',
    pkg
 ) }}
