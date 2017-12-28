@@ -8,6 +8,7 @@ roles:
   - virtualization
   - graphics
   - multimedia
+
 packages:
   - libreoffice
   - firefox
