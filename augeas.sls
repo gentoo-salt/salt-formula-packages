@@ -5,7 +5,7 @@
 
 {% for pkg in packages %}
 {{ package.accept_keywords(
-   'virtualbox',
+   'augeas',
    pkg
 ) }}
 {% endfor %}
