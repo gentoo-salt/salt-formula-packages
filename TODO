@@ -1,0 +1,3 @@
+use grains for list of packages to install
+update all salt states to use grains for package_keywords, etc
+create system/portage salt state that makes the system pretty in regards to /etc/portage/package.* folders

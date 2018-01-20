@@ -5,14 +5,14 @@
 {% set packages = ['app-emulation/virtualbox-extpack-oracle','app-emulation/virtualbox-additions','app-emulation/virtualbox'] %}
 {% set dependencies = ['app-emulation/virtualbox-modules', 'dev-util/kbuild'] %}
 
-{#{% set virtualbox_layman = 'pg_overlay' %}#}
-{#{% set virtualbox_layman = 'gentoo' %}#}
-{% set virtualbox_layman = '' %}
+{#{% set layman_repo = 'pg_overlay' %}#}
+{#{% set layman_repo = 'gentoo' %}#}
+{% set layman_repo = '' %}
 
-{% if virtualbox_layman %}
+{% if layman_repo %}
 add-layman:
   layman.present:
-    - name: {{ virtualbox_layman }}
+    - name: {{ layman_repo }}
 {% endif %}
 
 {% for pkg in packages %}
